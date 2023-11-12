@@ -1,5 +1,5 @@
 /*
-**THE PROBLEM WE ARE TRYING TO SOLVE**
+THE PROBLEM WE ARE TRYING TO SOLVE------------------------------------------------------------------------
 Problem:
 Developers and stakeholders in the mobile app industry face challenges in understanding factors 
 that contribute to the success or failure of an app. This includes making decisions on pricing strategies,
@@ -9,9 +9,8 @@ GOAL:
 This analysis aims to provide actionable insights for app developers and stakeholders,
 helping them make informed decisions regarding app development, marketing,
 and strategy in a highly competitive mobile app market.
-*/
-/*
-**DATASET CONTENT DESCRIPTION**
+
+DATASET CONTENT DESCRIPTION-------------------------------------------------------------------------------
 
 - appleStore.csv
 
@@ -41,7 +40,7 @@ and strategy in a highly competitive mobile app market.
 DATASET SOURCE : https://www.kaggle.com/datasets/ramamet4/app-store-apple-data-set-10k-apps
 */
 
-/*COMBINING THE DESCRIPTION TABLES INTO ONE TABLE*/
+/*COMBINING THE DESCRIPTION TABLES INTO ONE TABLE-----------------------------------------------------*/
 
 CREATE TABLE appleStore_description_combined AS
 SELECT*From appleStore_description1
@@ -52,7 +51,7 @@ SELECT*From appleStore_description3
 UNION ALL 
 SELECT*From appleStore_description4
 
-/*EXPLORATORY DATA ANALYSIS*/
+/*EXPLORATORY DATA ANALYSIS---------------------------------------------------------------------------*/
 -- checking the count of unique apps in both tables to unsure the inexistence of missing data
 
 SELECT COUNT(DISTINCT id) as apps_countt1
@@ -106,7 +105,7 @@ SELECT
 --results: median 4 ( the median might better represent the "typical" positive user experience compared to the average,
 --which could be influenced by a few lower ratings such as apps rated 0 )
 
-** DATA ANALYSIS ** 
+--DATA ANALYSIS----------------------------------------------------------------------------------------------------------------------------** 
 -- APP PRICE OVERVIEW :
 SELECT case 
                when price > 0 then 'paid'
